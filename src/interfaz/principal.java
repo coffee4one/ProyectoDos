@@ -60,11 +60,22 @@ public class principal extends javax.swing.JFrame {
                 txtnumerounoActionPerformed(evt);
             }
         });
+        txtnumerouno.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtnumerounoKeyTyped(evt);
+            }
+        });
         jPanel1.add(txtnumerouno, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 70, -1));
 
         jLabel3.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         jLabel3.setText("numero dos:");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, -1, -1));
+
+        txtnumerodos.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtnumerodosKeyTyped(evt);
+            }
+        });
         jPanel1.add(txtnumerodos, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 70, 70, -1));
 
         jLabel4.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
@@ -166,6 +177,28 @@ public class principal extends javax.swing.JFrame {
     private void txtnumerounoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnumerounoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtnumerounoActionPerformed
+
+    private void txtnumerounoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnumerounoKeyTyped
+       char c=evt.getKeyChar(); 
+             
+         
+          if(!Character.isDigit(c)) { 
+              getToolkit().beep();                
+              evt.consume(); 
+               
+          } 
+    }//GEN-LAST:event_txtnumerounoKeyTyped
+
+    private void txtnumerodosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtnumerodosKeyTyped
+        char c=evt.getKeyChar(); 
+             
+         
+          if(!Character.isDigit(c)) { 
+              getToolkit().beep();                
+              evt.consume(); 
+               
+          } 
+    }//GEN-LAST:event_txtnumerodosKeyTyped
 
     /**
      * @param args the command line arguments

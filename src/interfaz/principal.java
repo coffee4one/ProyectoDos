@@ -60,6 +60,8 @@ public class principal extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         jLabel4.setText("Resultado:");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, -1, -1));
+
+        txtresultado.setEditable(false);
         jPanel1.add(txtresultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 70, -1));
 
         cmdcalcular.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
@@ -73,6 +75,11 @@ public class principal extends javax.swing.JFrame {
 
         cmdborrar.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         cmdborrar.setText("Borrar");
+        cmdborrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdborrarActionPerformed(evt);
+            }
+        });
         jPanel1.add(cmdborrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -92,8 +99,28 @@ public class principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmdcalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdcalcularActionPerformed
-        // TODO add your handling code here:
+        String num1, num2, res;
+        int n1, n2, suma;
+        num1= txtnumerouno.getText();
+        num2= txtnumerodos.getText();
+        
+        n1= Integer.parseInt(num1);
+        n2= Integer.parseInt(num2);
+        
+        suma= n1 + n2;
+        res = String.valueOf(suma);
+        
+        txtresultado.setText (res);
     }//GEN-LAST:event_cmdcalcularActionPerformed
+
+    private void cmdborrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdborrarActionPerformed
+        txtnumerouno.setText("");
+        txtnumerodos.setText("");
+        txtresultado.setText("");
+        
+        txtnumerouno.requestFocusInWindow();
+        
+    }//GEN-LAST:event_cmdborrarActionPerformed
 
     /**
      * @param args the command line arguments

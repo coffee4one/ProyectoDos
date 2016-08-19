@@ -139,10 +139,15 @@ public class principal extends javax.swing.JFrame {
             txtnumerodos.requestFocusInWindow();
         }else{
         
+            
         n1=Double.parseDouble(txtnumerouno.getText());
         n2=Double.parseDouble(txtnumerodos.getText());
         op=cmbOperation.getSelectedIndex();
-        
+        if(op == 3 && n2==0){
+            JOptionPane.showMessageDialog(this,"No digite cero en el segundo numero", "Error", JOptionPane.ERROR_MESSAGE);
+            txtnumerodos.requestFocusInWindow();
+            txtnumerodos.selectAll();
+        }else{
         switch(op) {
             case 0:
                 resultado=n1+n2;
@@ -158,10 +163,12 @@ public class principal extends javax.swing.JFrame {
                 break;
         }
         
-       
+        
         res = String.valueOf(resultado);
         
         txtresultado.setText (res);
+        
+        }
     }//GEN-LAST:event_cmdcalcularActionPerformed
     }
     private void cmdborrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdborrarActionPerformed

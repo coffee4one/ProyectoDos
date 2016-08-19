@@ -29,24 +29,71 @@ public class principal extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        txtnumerouno = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        txtnumerodos = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        txtresultado = new javax.swing.JTextField();
+        cmdcalcular = new javax.swing.JButton();
+        cmdborrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel1.setText("Suma de dos numeros");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jLabel2.setText("numero uno:");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+        jPanel1.add(txtnumerouno, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 70, -1));
+
+        jLabel3.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jLabel3.setText("numero dos:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 70, -1, -1));
+        jPanel1.add(txtnumerodos, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 70, 70, -1));
+
+        jLabel4.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        jLabel4.setText("Resultado:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, -1, -1));
+        jPanel1.add(txtresultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 130, 70, -1));
+
+        cmdcalcular.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        cmdcalcular.setText("Calcular");
+        cmdcalcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdcalcularActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cmdcalcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, -1, -1));
+
+        cmdborrar.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
+        cmdborrar.setText("Borrar");
+        jPanel1.add(cmdborrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cmdcalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdcalcularActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmdcalcularActionPerformed
 
     /**
      * @param args the command line arguments
@@ -84,6 +131,15 @@ public class principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cmdborrar;
+    private javax.swing.JButton cmdcalcular;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JTextField txtnumerodos;
+    private javax.swing.JTextField txtnumerouno;
+    private javax.swing.JTextField txtresultado;
     // End of variables declaration//GEN-END:variables
 }
